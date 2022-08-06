@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "name": "ecommerce-vuejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "core",
+    "http-client",
+    "vue-app"
+  ],
+  "scripts": {
+    "core:start": "pnpm start -w @ecommerce/core",
+    "http:start": "pnpm start -w @ecommerce/http-infra",
+    "vue-app:start": "pnpm run dev -w @ecommerce/vue-app"
+  },
+  "keywords": [],
+  "author": "rodrigoRolim",
+  "license": "ISC"
+}
