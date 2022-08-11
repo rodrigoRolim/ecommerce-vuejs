@@ -5,14 +5,14 @@
   "description": "",
   "main": "index.js",
   "workspaces": [
-    "core",
-    "http-client",
-    "vue-app"
+    "packages/*"
   ],
   "scripts": {
-    "core:start": "pnpm start -w @ecommerce/core",
-    "http:start": "pnpm start -w @ecommerce/http-infra",
-    "vue-app:start": "pnpm run dev -w @ecommerce/vue-app"
+    "core:start": "pnpm --filter @ecommerce/core start",
+    "http:start": "pnpm --filter @ecommerce/http-infra start",
+    "vue-app:start": "pnpm --filter @ecommerce/vue-app dev",
+    "build:all": "pnpm run --parallel -r build",
+    "start:all": "pnpm run --parallel -r start"
   },
   "keywords": [],
   "author": "rodrigoRolim",

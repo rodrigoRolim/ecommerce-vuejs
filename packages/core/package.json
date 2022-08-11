@@ -2,7 +2,7 @@
   "name": "@ecommerce/core",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc --build",
     "start": "tsc --watch",
@@ -15,5 +15,8 @@
     "jest": "^28.1.3",
     "ts-jest": "^28.0.7",
     "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@ecommerce/http-infra": "workspace:^1.0.0"
   }
 }
