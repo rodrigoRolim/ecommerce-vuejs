@@ -19,12 +19,42 @@ export class Cart {
   }
 
   addCartItem(item: CartItem): Cart {
-
+    const existItem = this.cartItems.find(item => item.id === item.id)
     
+    if(existItem) {
+
+      const newItems = this.cartItems.map(oldItem => {
+        if (oldItem.id === item.id) {
+            return { ...oldItem, quantity: oldItem.quantity + item.quantity };
+        } else {
+            return oldItem;
+        }
+      });
+
+      return new Cart(newItems);
+    } else {
+      const newItems = [...this.cartItems, item];
+
+      return new Cart(newItems);
+    }
   }
 
-  removeCartItem(item: CartItem): Cart {
+  removeCartItem(itemId: number): Cart {
+    const newItems = this.cartItems.filter(i => i.id !== itemId);
 
+    return new Cart(newItems);
+  }
+
+  editCartItem(itemId: number, quantity: number): Cart {
+    const newItems = this.cartItems.map(oldItem => {
+      if (oldItem.id === itemId) {
+          return { ...oldItem, quantity: quantity };
+      } else {
+          return oldItem;
+      }
+    });
+
+    return new Cart(newItems);
   }
 
   private calculateAmount(cartItems: CartItem[]): Amount {
