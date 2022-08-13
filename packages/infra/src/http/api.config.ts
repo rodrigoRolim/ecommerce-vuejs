@@ -1,6 +1,6 @@
 import qs from "qs";
 import { PathLike } from "fs";
-import envs from "../endpoint.config";
+import envs from "./endpoint.config";
 
 export const apiConfig = {
   returnRejectedPromiseOnError: true,

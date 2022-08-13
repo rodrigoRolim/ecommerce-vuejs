@@ -5,7 +5,7 @@ import {
   AxiosError,
 } from "axios";
 
-import { apiConfig } from "./api.config";
+import { apiConfig } from "../api.config";
 /**
  * @class Api Class is a fancy es6 wrapper class for axios.
  *
