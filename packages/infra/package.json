@@ -17,7 +17,6 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "@ecommerce/core": "workspace:^1.0.0",
     "axios": "^0.27.2",
     "qs": "^6.11.0"
   }
