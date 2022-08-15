@@ -1,4 +1,4 @@
 packages:
   - 'packages/core'
-  - 'packages/http-infra'
+  - 'packages/infra'
   - 'packages/vue-app'
