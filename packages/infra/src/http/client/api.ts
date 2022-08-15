@@ -14,7 +14,6 @@ import { apiConfig } from "../api.config";
  */
 
 export class Api extends Axios {
-  private token: string;
 
   /**
    * Creates an instance of api.
@@ -22,41 +21,8 @@ export class Api extends Axios {
    */
   public constructor () {
     super(apiConfig);
-
-    this.token="";
-    this.getToken = this.getToken.bind(this);
-    this.setToken = this.setToken.bind(this);
-    this.getUri = this.getUri.bind(this);
-    this.request = this.request.bind(this);
-    this.get = this.get.bind(this);
-    this.options = this.options.bind(this);
-    this.delete = this.delete.bind(this);
-    this.head = this.head.bind(this);
-    this.post = this.post.bind(this);
-    this.put = this.put.bind(this);
-    this.patch = this.patch.bind(this);
-    this.success = this.success.bind(this);
-    this.error = this.error.bind(this);
   }
-  /**
-   * Gets Token.
-   *
-   * @returns {string} token.
-   * @memberof Api
-   */
-  public getToken(): string {
-    return this.token;
-  }
-  /**
-   * Sets Token.
-   *
-   * @param {string} token - token.
-   * @memberof Api
-   */
-  public setToken(token: string): void {
-    this.token = token;
-  }
-
+  
   /**
    * Get Uri
    *
