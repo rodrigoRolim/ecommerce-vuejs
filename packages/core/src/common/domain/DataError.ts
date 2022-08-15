@@ -14,4 +14,5 @@ export interface Unauthorized {
 export interface NotFound {
   kind: "NotFound";
 }
+
 export type DataError = ApiError | UnexpectedError | Unauthorized;
