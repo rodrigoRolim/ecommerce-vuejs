@@ -4,7 +4,6 @@ import envs from "./endpoint.config";
 
 export const apiConfig = {
   returnRejectedPromiseOnError: true,
-  withCredentials: true,
   timeout: 30000,
   baseURL: envs.ApiUrlBase,
   headers: {
