@@ -1,4 +1,4 @@
-import { Price, Title, Image } from "../../../products/domain/entites/Produto";
+import { Price, Title, Image } from "../../../products/domain/entites/Product";
 
 type CartItemId = number;
 type Quantity = number;
