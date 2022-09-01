@@ -6,7 +6,9 @@
 </template>
 <style lang="scss" scoped>
 .LDefault { 
-  max-width: 1280px;
-  margin: 0 auto;
+  margin: 1rem 0;
+  background-color: white;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 1rem;
 }
 </style>
