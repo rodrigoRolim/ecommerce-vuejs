@@ -11,32 +11,40 @@ const ploc = dependencies.provideProductsPloc();
 const { state, subscribe, unsubscribe } = usePlocState(ploc);
 
 onMounted(() => {
-  ploc.search();
   subscribe();
-  console.log(state)
+  ploc.search();
 })
 onUnmounted(() => {
   unsubscribe();
 })
 </script>
 <template>
-  <TProducts>
+  <TProducts class="Products">
     <template #header>
-      <o-product-header
-        :amount="234.22"
-      /> {{state}}
-    </template>
+      </template>
     <template #navigation>
       <h1>shooppiest</h1>
+      <o-product-header
+        :amount="234.22"
+      />
     </template>
     <template #content>
       <o-product-list
         v-if="state.kind === 'LoadedProductsState'"
         :products="state.products"
+        class="Products__List"
       />
-      <div class="spinner-border" role="status" v-else>
+      <div class="Products__Loading spinner-border" role="status" v-else>
         <span class="visually-hidden">Loading...</span>
       </div>
     </template>
   </TProducts>
 </template>
+
+<style lang="scss" scoped>
+h1 {
+  font-size: 1.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(96, 113, 124)
+}
+</style>
