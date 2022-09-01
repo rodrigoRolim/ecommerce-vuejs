@@ -1,0 +1,16 @@
+/* forms */
+
+.border-rounded {
+  border-radius: 8px;
+}
+.border-no-rounded {
+  border-radius: 0;
+}
+
+$base-radius: 5%;
+
+@for $r from 0 to 21 {
+  .rounded-#{$r} {
+    border-radius: calc($base-radius*$r) !important;
+  }
+}
