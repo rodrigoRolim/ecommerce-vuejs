@@ -6,6 +6,7 @@ interface Props {
   products: Product[];
 }
 defineProps<Props>();
+
 </script>
 <template>
 <div class="OProductList">
