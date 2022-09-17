@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { MPrice, MInputCount } from "@/components/Commons";
-
 import { computed } from "vue";
+
+import { AButton, MPrice, MInputCount } from "@/components/Commons";
 
 interface Props {
   alternative: string;
@@ -16,14 +16,18 @@ const truncatedTitle = computed(() => {
   if (props.title.length > 26) {
 
     return props.title.substring(0, 23) + "..."
-  } 
+  }
   return props.title;
 });
 </script>
 <template>
-<div class="MProductCard card px-3 rounded-1">
+<div class="MProductCard card px-3 rounded-0">
   <div class="MProductCard__Header">
-    
+    <a-button
+      icon="ri-heart-fill"
+      rounded
+      ghost
+    />
   </div>
   <img :src="image" class="card-img-top p-0" :alt="alternative">
   <div class="MProductCard__Body card-body py-2">
