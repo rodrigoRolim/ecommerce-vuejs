@@ -1,6 +1,5 @@
-import "bootstrap/dist/css/bootstrap.min.css"
-import "bootstrap"
 import "@/design/__main.scss";
+import "remixicon/fonts/remixicon.css";
 
 import { createApp } from 'vue'
 import './style.css'
