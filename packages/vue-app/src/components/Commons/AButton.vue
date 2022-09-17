@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed, withDefaults } from 'vue';
-import { iColor, iSize, FixedLengthArray } from '@/type';
+import { iColor, iSize } from '@/type';
 
 type iValuesPossible = 0 | 1;
 type iBorderRadius = [iValuesPossible, iValuesPossible, iValuesPossible, iValuesPossible];
@@ -11,6 +11,8 @@ interface Props {
   label?: string;
   size: iSize;
   icon?: string;
+  rounded?: boolean;
+  ghost?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -34,15 +36,25 @@ const getBorderRadius = computed(() => {
   <button
     class="AButton"
     :class="{
-      'btn btn-primary': color == 'primary',
+      'bg-primary': color == 'primary',
+      'border-primary': color == 'primary',
+      'text-primary': color == 'primary',
       'btn btn-sm': size == 'small',
+      'rounded-20': rounded,
+      'ghost-button': ghost
     }"
     :style="{
       borderRadius: getBorderRadius
     }"
     @click=""
   >
-    {{ label }}
+    <em v-if="icon" :class="icon"></em>
+    <span v-else>{{ label }}</span>
   </button>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.AButton {
+  display: flex;
+  align-items: center;
+}
+</style>
