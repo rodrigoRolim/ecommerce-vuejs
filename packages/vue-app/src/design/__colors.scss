@@ -4,7 +4,7 @@
 
 $cl-light: 231 77% 90%;
 $cl-dark: 230 35% 7%;
-$cl-muted:208, 7%, 46%; 
+$cl-muted: 208, 7%, 46%; 
 $cl-white: 0 0% 100%;
 
 $cl-success: 134, 61%, 41%;
@@ -16,15 +16,15 @@ $cl-primary: 211, 100%, 50%;
 $cl-secondary: 208, 7%, 46%;
 
 :root {
-  --color-dark: $cl-dark;
-  --color-light: $cl-light;
-  --color-white: $cl-white;
-  --color-success: $cl-success;
-  --color-warning: $cl-warning;
-  --color-danger: $cl-danger;
-  --color-info: $cl-info;
-  --color-primary: $cl-primary;
-  --color-secondary: $cl-secondary;
+  --color-dark: 230 35% 7%
+  --color-light: 231 77% 90%;
+  --color-white: 0 0% 100%;
+  --color-success: 134, 61%, 41%;
+  --color-warning: 45, 100%, 51%;
+  --color-danger: 354, 70%, 54%;
+  --color-info: 188, 78%, 41%;
+  --color-primary: 211, 100%, 50%;
+  --color-secondary: 208, 7%, 46%;
 }
 
 /* background colors */
@@ -34,9 +34,9 @@ $cl-secondary: 208, 7%, 46%;
 .bg-white { background-color: hsl( var(--color-white) ); }
 .bg-muted { background-color: hsl( var(--color-muted ) ); }
 
-.bg-success { background-color: hsl( var(--color-success ) );}
-.bg-warning { background-color: hsl( var(--color-warning ) );}
-.bg-info { background-color: hsl( var(--color-info ) );}
+.bg-success { background-color: hsl( var(--color-success ) ); }
+.bg-warning { background-color: hsl( var(--color-warning ) ); }
+.bg-info { background-color: hsl( var(--color-info ) ); }
 .bg-danger { background-color: hsl( var(--color-danger ) ); }
 
 .bg-primary { background-color: hsl( var(--color-primary) ); }
@@ -83,5 +83,5 @@ $cl-secondary: 208, 7%, 46%;
 .border-info { border-color: hsl( var(--color-info) ); }
 .border-danger { border-color: hsl( var(--color-danger) ); }
 
-.border-primary { border-color: hsl( var(--primary-primary) ); }
-.border-secondary { border-color: hsl( var(--secondary-primary) ); }
+.border-primary { border-color: hsl( var(--color-primary) ); }
+.border-secondary { border-color: hsl( var(--color-primary) ); }
