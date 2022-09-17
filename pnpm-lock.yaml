@@ -39,6 +39,7 @@ importers:
       '@popperjs/core': ^2.11.6
       '@vitejs/plugin-vue': ^3.0.0
       bootstrap: ^5.2.0
+      remixicon: ^2.5.0
       sass: ^1.54.4
       typescript: ^4.6.4
       vite: ^3.0.0
@@ -48,6 +49,7 @@ importers:
       '@ecommerce/core': link:../core
       '@popperjs/core': 2.11.6
       bootstrap: 5.2.0_@popperjs+core@2.11.6
+      remixicon: 2.5.0
       vue: 3.2.37
     devDependencies:
       '@vitejs/plugin-vue': 3.0.1_vite@3.0.4+vue@3.2.37
@@ -2518,6 +2520,10 @@ packages:
     dependencies:
       picomatch: 2.3.1
     dev: true
+
+  /remixicon/2.5.0:
+    resolution: {integrity: sha512-q54ra2QutYDZpuSnFjmeagmEiN9IMo56/zz5dDNitzKD23oFRw77cWo4TsrAdmdkPiEn8mxlrTqxnkujDbEGww==}
+    dev: false
 
   /require-directory/2.1.1:
     resolution: {integrity: sha512-fGxEI7+wsG9xrvdjsrlmL22OMTTiHRwAMroiEeMgq8gzoLC/PQr7RsRDSTLUg/bZAZtF+TVIkHc6/4RIKrui+Q==}
